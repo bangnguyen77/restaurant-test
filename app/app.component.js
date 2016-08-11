@@ -27,16 +27,16 @@ System.register(['angular2/core', './restaurant-list.component', './restaurant.m
             AppComponent = (function () {
                 function AppComponent() {
                     this.restaurants = [
-                        new restaurant_model_1.Restaurant('test-name', 'test-specialty', 'test-address', 1, 0),
-                        new restaurant_model_1.Restaurant('test-name2', 'test-specialty2', 'test-address2', 2, 1),
-                        new restaurant_model_1.Restaurant('test-name3', 'test-specialty3', 'test-address3', 3, 2)
+                        new restaurant_model_1.Restaurant('Italian Restaurant', 'Italian', 'test-address', "$", 0),
+                        new restaurant_model_1.Restaurant('Mexican Restaurant', 'Mexican', 'test-address2', "$$", 1),
+                        new restaurant_model_1.Restaurant('American Restaurant', 'American', 'test-address3', "$$$", 2)
                     ];
                 }
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
                         directives: [restaurant_list_component_1.RestaurantListComponent],
-                        template: "\n    <restaurant-list [restaurantList]=\"restaurants\">\n    </restaurant-list>\n  "
+                        template: "\n    <div class=\"container\">\n      <h1>Restaurant Reviews</h1>\n      <restaurant-list [restaurantList]=\"restaurants\">\n      </restaurant-list>\n    </div>\n  "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);

@@ -7,10 +7,10 @@ import { Restaurant } from './restaurant.model';
   template: `
     <div>
       <h3>{{ restaurant.name }}</h3>
-      <p>{{ restaurant.specialty }}</p>
-      <p>{{ restaurant.address }}</p>
-      <p>{{ "$" + restaurant.price }}</p>
-      <p>{{ restaurant.rating }}<p>
+      <p>Specialty: {{ restaurant.specialty }}</p>
+      <p>Address: {{ restaurant.address }}</p>
+      <p>Price: {{ restaurant.price }}</p>
+      <p>Rating: {{ restaurant.rating }}<p>
     </div>
   `
 })
