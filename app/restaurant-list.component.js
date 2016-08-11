@@ -1,4 +1,4 @@
-System.register(['angular2/core', './restaurant.component', './specialty.pipe'], function(exports_1, context_1) {
+System.register(['angular2/core', './restaurant.component', './edit-restaurant.component', './specialty.pipe'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', './restaurant.component', './specialty.pipe'],
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, restaurant_component_1, specialty_pipe_1;
+    var core_1, restaurant_component_1, edit_restaurant_component_1, specialty_pipe_1;
     var RestaurantListComponent;
     return {
         setters:[
@@ -19,6 +19,9 @@ System.register(['angular2/core', './restaurant.component', './specialty.pipe'],
             },
             function (restaurant_component_1_1) {
                 restaurant_component_1 = restaurant_component_1_1;
+            },
+            function (edit_restaurant_component_1_1) {
+                edit_restaurant_component_1 = edit_restaurant_component_1_1;
             },
             function (specialty_pipe_1_1) {
                 specialty_pipe_1 = specialty_pipe_1_1;
@@ -38,9 +41,9 @@ System.register(['angular2/core', './restaurant.component', './specialty.pipe'],
                     core_1.Component({
                         selector: 'restaurant-list',
                         inputs: ['restaurantList'],
-                        directives: [restaurant_component_1.RestaurantComponent],
+                        directives: [restaurant_component_1.RestaurantComponent, edit_restaurant_component_1.EditRestaurantComponent],
                         pipes: [specialty_pipe_1.SpecialtyPipe],
-                        template: "\n    <select (change)=\"onSpecialtyChange($event.target.value)\">\n      <option value=\"all\">View All Restaurants</option>\n      <option value=\"Italian\">View Italian Restaurants</option>\n      <option value=\"Mexican\">View Mexican Restaurants</option>\n      <option value=\"American\">View American Restaurants</option>\n    </select>\n    <restaurant-display *ngFor=\"#currentRestaurant of restaurantList | specialty:specialtyFilter\"\n      [restaurant]=\"currentRestaurant\" (click)=\"restaurantClicked(currentRestaurant)\"\n      [class.selected]=\"currentRestaurant === selectedRestaurant\">\n    </restaurant-display>\n  "
+                        template: "\n    <select (change)=\"onSpecialtyChange($event.target.value)\">\n      <option value=\"all\">View All Restaurants</option>\n      <option value=\"Italian\">View Italian Restaurants</option>\n      <option value=\"Mexican\">View Mexican Restaurants</option>\n      <option value=\"American\">View American Restaurants</option>\n    </select>\n    <restaurant-display *ngFor=\"#currentRestaurant of restaurantList | specialty:specialtyFilter\"\n      [restaurant]=\"currentRestaurant\" (click)=\"restaurantClicked(currentRestaurant)\"\n      [class.selected]=\"currentRestaurant === selectedRestaurant\">\n    </restaurant-display>\n    <edit-restaurant *ngIf=\"selectedRestaurant\" [restaurant]=\"selectedRestaurant\"></edit-restaurant>\n  "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], RestaurantListComponent);
