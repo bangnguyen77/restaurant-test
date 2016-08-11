@@ -32,7 +32,7 @@ System.register(['angular2/core', './restaurant.component'], function(exports_1,
                         selector: 'restaurant-list',
                         inputs: ['restaurantList'],
                         directives: [restaurant_component_1.RestaurantComponent],
-                        template: "\n    <restaurant-display *ngFor=\"currentRestaurant of restaurantList\"\n      [restaurant]=\"currentRestaurant\" (click)=\"restaurantClicked(currentRestaurant)\">\n      [class.selected]=\"currentRestaurant === selectedRestaurant\">\n    </restaurant-display>\n  "
+                        template: "\n    <restaurant-display *ngFor=\"#currentRestaurant of restaurantList\"\n      [restaurant]=\"currentRestaurant\" (click)=\"restaurantClicked(currentRestaurant)\"\n      [class.selected]=\"currentRestaurant === selectedRestaurant\">\n    </restaurant-display>\n  "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], RestaurantListComponent);

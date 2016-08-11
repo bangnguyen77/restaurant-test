@@ -7,8 +7,8 @@ import { Restaurant } from './restaurant.model';
   inputs: ['restaurantList'],
   directives: [RestaurantComponent],
   template: `
-    <restaurant-display *ngFor="currentRestaurant of restaurantList"
-      [restaurant]="currentRestaurant" (click)="restaurantClicked(currentRestaurant)">
+    <restaurant-display *ngFor="#currentRestaurant of restaurantList"
+      [restaurant]="currentRestaurant" (click)="restaurantClicked(currentRestaurant)"
       [class.selected]="currentRestaurant === selectedRestaurant">
     </restaurant-display>
   `

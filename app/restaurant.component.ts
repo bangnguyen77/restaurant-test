@@ -7,8 +7,8 @@ import { Restaurant } from './restaurant.model';
   template: `
     <div>
       <h3>{{ restaurant.name }}</h3>
-      <p>{{ restaurant.specialty }}</h3>
-      <p>{{ restaurant.address }}</h3>
+      <p>{{ restaurant.specialty }}</p>
+      <p>{{ restaurant.address }}</p>
       <p>{{ "$" + restaurant.price }}</p>
       <p>{{ restaurant.rating }}<p>
     </div>

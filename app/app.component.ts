@@ -6,11 +6,8 @@ import { Restaurant } from './restaurant.model';
   selector: 'my-app',
   directives: [RestaurantListComponent],
   template: `
-    <div>
-      <h1>Restaurant Reviews</h1>
-      <restaurant-list ['restaurantList']="restaurants">
-      </restaurant-list>
-    </div>
+    <restaurant-list [restaurantList]="restaurants">
+    </restaurant-list>
   `
 })
 
