@@ -5,7 +5,8 @@ import { Restaurant } from './restaurant.model';
   selector: 'restaurant-rating',
   inputs: ['restaurant'],
   template: `
-    <div>
+    <div class="restaurant-ratings">
+    <h3>Rate "{{ restaurant.name }}"</h3>
       <label for="rating">Rate from 1 to 5</label>
       <input #rating class="rating" type="number">
       <label for="wait-time">How long did you wait?</label>

@@ -5,3 +5,8 @@ h1 {
 .selected {
   color: red;
 }
+
+.restaurant-ratings,
+.restaurant-edits {
+  margin-top: 50px;
+}

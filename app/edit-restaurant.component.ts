@@ -5,8 +5,8 @@ import { Restaurant } from './restaurant.model';
   selector: 'edit-restaurant',
   inputs: ['restaurant'],
   template: `
-    <div>
-      <h3>Edit</h3>
+    <div class="restaurant-edits">
+      <h3>Edit {{ restaurant.name }}</h3>
       <input [(ngModel)]="restaurant.name">
       <input [(ngModel)]="restaurant.specialty">
       <input [(ngModel)]="restaurant.address">

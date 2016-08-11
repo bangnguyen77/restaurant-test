@@ -8,18 +8,28 @@ import { Restaurant } from './restaurant.model';
 export class SpecialtyPipe implements PipeTransform {
   transform(input: Restaurant[], args) {
     var specialtyFilter = args[0];
+    var output: Restaurant[] = [];
     if (specialtyFilter === "Italian") {
-      return input.filter((restaurant) => {
-        return restaurant.specialty === "Italian";
-      });
+      for (var i=0; i<input.length; i++) {
+        if (input[i].specialty === "Italian") {
+          output.push(input[i]);
+        }
+      }
+      return output;
     } else if (specialtyFilter === "Mexican") {
-      return input.filter((restaurant) => {
-        return restaurant.specialty === "Mexican";
-      });
+      for (var i=0; i<input.length; i++) {
+        if (input[i].specialty === "Mexican") {
+          output.push(input[i]);
+        }
+      }
+      return output;
     } else if (specialtyFilter === "American") {
-      return input.filter((restaurant) => {
-        return restaurant.specialty === "American";
-      });
+      for (var i=0; i<input.length; i++) {
+        if (input[i].specialty === "American") {
+          output.push(input[i]);
+        }
+      }
+      return output;
     } else {
       return input;
     }
