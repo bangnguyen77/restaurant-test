@@ -8,7 +8,7 @@ import { Restaurant } from './restaurant.model';
   template: `
     <div>
       <h1>Restaurant Reviews</h1>
-      <restaurant-list ['restaurantList']="restaurant">
+      <restaurant-list ['restaurantList']="restaurants">
       </restaurant-list>
     </div>
   `

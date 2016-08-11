@@ -36,7 +36,7 @@ System.register(['angular2/core', './restaurant-list.component', './restaurant.m
                     core_1.Component({
                         selector: 'my-app',
                         directives: [restaurant_list_component_1.RestaurantListComponent],
-                        template: "\n    <div>\n      <h1>Restaurant Reviews</h1>\n      <restaurant-list ['restaurantList']=\"restaurant\">\n      </restaurant-list>\n    </div>\n  "
+                        template: "\n    <div>\n      <h1>Restaurant Reviews</h1>\n      <restaurant-list ['restaurantList']=\"restaurants\">\n      </restaurant-list>\n    </div>\n  "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);

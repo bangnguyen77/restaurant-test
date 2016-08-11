@@ -24,12 +24,15 @@ System.register(['angular2/core', './restaurant.component'], function(exports_1,
             RestaurantListComponent = (function () {
                 function RestaurantListComponent() {
                 }
+                RestaurantListComponent.prototype.restaurantClicked = function (restaurant) {
+                    this.selectedRestaurant = restaurant;
+                };
                 RestaurantListComponent = __decorate([
                     core_1.Component({
                         selector: 'restaurant-list',
                         inputs: ['restaurantList'],
                         directives: [restaurant_component_1.RestaurantComponent],
-                        template: "\n    <restaurant-display *ngFor=\"currentRestaurant of restaurantList\"\n      [restaurant]=\"currentRestaurant\">\n    </restaurant-display>\n  "
+                        template: "\n    <restaurant-display *ngFor=\"currentRestaurant of restaurantList\"\n      [restaurant]=\"currentRestaurant\" (click)=\"restaurantClicked(currentRestaurant)\">\n      [class.selected]=\"currentRestaurant === selectedRestaurant\">\n    </restaurant-display>\n  "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], RestaurantListComponent);
