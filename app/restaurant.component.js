@@ -25,7 +25,7 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                     core_1.Component({
                         selector: 'restaurant-display',
                         inputs: ['restaurant'],
-                        template: "\n    <div>\n      <h3>{{ restaurant.name }}</h3>\n      <p>Specialty: {{ restaurant.specialty }}</p>\n      <p>Address: {{ restaurant.address }}</p>\n      <p>Price: {{ restaurant.price }}</p>\n      <p>Rating: {{ restaurant.rating }}<p>\n    </div>\n  "
+                        template: "\n    <div>\n      <h3>{{ restaurant.name }}</h3>\n      <p>Specialty: {{ restaurant.specialty }}</p>\n      <p>Address: {{ restaurant.address }}</p>\n      <p>Price: {{ restaurant.price }}</p>\n      <p>Rating: {{ restaurant.rating }}<p>\n      <p>Average Rating: {{ restaurant.ratingAverage + \" stars\"}}</p>\n      <p>Average Wait Time: {{ restaurant.waitTimeAverage + \" minutes\" }}</p>\n    </div>\n  "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], RestaurantComponent);

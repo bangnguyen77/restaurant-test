@@ -2,12 +2,13 @@ import { Component } from 'angular2/core';
 import { RestaurantComponent } from './restaurant.component';
 import { Restaurant } from './restaurant.model';
 import { EditRestaurantComponent } from './edit-restaurant.component';
+import { RestaurantRatingComponent } from './restaurant-rating.component';
 import { SpecialtyPipe  } from './specialty.pipe';
 
 @Component({
   selector: 'restaurant-list',
   inputs: ['restaurantList'],
-  directives: [RestaurantComponent, EditRestaurantComponent],
+  directives: [RestaurantComponent, EditRestaurantComponent, RestaurantRatingComponent],
   pipes: [SpecialtyPipe],
   template: `
     <select (change)="onSpecialtyChange($event.target.value)">
@@ -21,6 +22,7 @@ import { SpecialtyPipe  } from './specialty.pipe';
       [class.selected]="currentRestaurant === selectedRestaurant">
     </restaurant-display>
     <edit-restaurant *ngIf="selectedRestaurant" [restaurant]="selectedRestaurant"></edit-restaurant>
+    <restaurant-rating *ngIf="selectedRestaurant" [restaurant]="selectedRestaurant"></restaurant-rating>
   `
 })
 

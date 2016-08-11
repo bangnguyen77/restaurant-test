@@ -12,8 +12,27 @@ System.register([], function(exports_1, context_1) {
                     this.address = address;
                     this.price = price;
                     this.id = id;
-                    this.rating = 2.5;
+                    this.allRatings = [3];
+                    this.allWaitTimes = [10];
+                    this.ratingAverage = 3;
+                    this.waitTimeAverage = 10;
                 }
+                Restaurant.prototype.getAverageRating = function () {
+                    var total = 0;
+                    for (var _i = 0, _a = this.allRatings; _i < _a.length; _i++) {
+                        var rating = _a[_i];
+                        total += rating;
+                    }
+                    this.ratingAverage = total / this.allRatings.length;
+                };
+                Restaurant.prototype.getAverageWaitTime = function () {
+                    var total = 0;
+                    for (var _i = 0, _a = this.allWaitTimes; _i < _a.length; _i++) {
+                        var wait = _a[_i];
+                        total += wait;
+                    }
+                    return this.waitTimeAverage = total / this.allWaitTimes.length;
+                };
                 return Restaurant;
             }());
             exports_1("Restaurant", Restaurant);

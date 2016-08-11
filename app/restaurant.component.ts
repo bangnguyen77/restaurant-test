@@ -11,6 +11,8 @@ import { Restaurant } from './restaurant.model';
       <p>Address: {{ restaurant.address }}</p>
       <p>Price: {{ restaurant.price }}</p>
       <p>Rating: {{ restaurant.rating }}<p>
+      <p>Average Rating: {{ restaurant.ratingAverage + " stars"}}</p>
+      <p>Average Wait Time: {{ restaurant.waitTimeAverage + " minutes" }}</p>
     </div>
   `
 })
